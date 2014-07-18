@@ -1,0 +1,6 @@
+---
+#play with vagrant
+- hosts: all
+  remote_user: vagrant
+  roles:
+    - nginx-server

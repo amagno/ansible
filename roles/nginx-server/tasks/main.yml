@@ -1,0 +1,19 @@
+---
+- name: Install Python Software Properties
+  apt: name=python-software-properties state=present update_cache=yes
+
+- name: Add Nginx Repository
+  apt_repository: repo='ppa:nginx/stable'
+
+- name: Update apt-cache
+  apt: update_cache=yes
+
+- name: Install Nignx
+  apt: name=nginx state=present
+  notify: start nginx
+
+
+- name: Print nginx version
+  command: nginx -v
+
+- debug: msg="This Nginx Version is {{ nginx_version.stdout }}"
