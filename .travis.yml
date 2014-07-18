@@ -32,7 +32,7 @@ script:
 
   - php -v
 
-  - service nginx status
+  - nginx status
 
   - ls /etc/nginx/
 
@@ -44,7 +44,9 @@ script:
 
   - cat /etc/nginx/sites-enabled/nginx-ansible
 
-  - ls /var/www/
+  - ls -la /var/www/
+
+  - ls -la /var/www/ansibletest/
 
 
   # Run the role/playbook again, checking to make sure it's idempotent.
