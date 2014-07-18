@@ -1,6 +1,12 @@
 ---
+- name: Add ppa php5 repository
+  apt_repository: repo='ppa:ondrej/php5'
+
+- name: Update cache
+  apt: update_cache=yes
+
 - name: Dev Environment Install php5-fpm and components
-  apt: name={{ item }} state=latest update_cache=yes
+  apt: name={{ item }} state=present update_cache=yes
   with_items:
     - php5-fpm
     - php5-common
