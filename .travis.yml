@@ -48,7 +48,9 @@ script:
 
   - ls -la /var/www/ansibletest/
 
+  - ls -la /etc/php-fpm.d/
 
+  - cat /etc/php-fpm.d/www.conf
 
   # Run the role/playbook again, checking to make sure it's idempotent.
   #- >
