@@ -15,7 +15,7 @@
   command: nginx -v
 
 - name: Add nginx-ansible config to sites-enabled
-  template: src=nginx-ansible.conf dest=/etc/nginx/sites-enabled/
+  template: src=nginx-ansible.conf dest=/etc/nginx/sites-enabled/nginx-ansible
   notify: restart nginx
 
 

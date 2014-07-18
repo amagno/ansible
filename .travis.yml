@@ -30,11 +30,21 @@ script:
   # Run the role/playbook with ansible-playbook.
   - ansible-playbook -i tests/inventory --connection=local --sudo -vvvv tests/$PLAY
 
+  - php -v
+
+  - service --status-all
+
   - ls /etc/nginx/
+
+  - cat /etc/nginx/nginx.conf
 
   - ls /etc/nginx/sites-enabled/
 
-  - cat /etc/nginx/sites-enabled/nginx-ansible.conf
+  - cat /etc/nginx/sites-enabled/default
+
+  - cat /etc/nginx/sites-enabled/nginx-ansible
+
+  - ls /var/www/
 
 
   # Run the role/playbook again, checking to make sure it's idempotent.
