@@ -54,6 +54,8 @@ script:
 
   - ls /etc/php5/fpm/pool.d/
 
+  - cat /etc/php5/fpm/pool.d/www.conf
+
   # Run the role/playbook again, checking to make sure it's idempotent.
   #- >
   #  ansible-playbook -i tests/inventory tests/$SITE --connection=local --sudo
