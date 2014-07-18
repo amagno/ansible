@@ -19,7 +19,7 @@
   notify: restart nginx
 
 - name: View nginx sites-enabled
-  command: ls -ln /etc/nignx/sites-enabled/
+  command: ls -ln /etc/nginx/sites-enabled/
   register: debug_sites_enabled
 
 - debug: msg="Debug index php file php-fpm {{ debug_sites_enabled.stdout }}"
