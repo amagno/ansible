@@ -14,30 +14,22 @@ install:
   - pip install ansible
 
 
-
 script:
   # Add ansible.cfg to pick up roles path.
   # - ls
   # teste
   # - printf '[defaults]\nroles_path = /home/travis/build/amagno/ansible/' > tests/ansible.cfg
   
-  # - cp -r /home/travis/build/amagno/ansible/roles/ /home/travis/build/amagno/ansible/tests/roles/
+  - cp -r /home/travis/build/amagno/ansible/roles/ /home/travis/build/amagno/ansible/tests/roles/
 
-  - ls -ln tests/
-  
-  # - ls -ln tests/roles/
+  - ls tests/
+  - ls tests/roles/
 
-  - cat tests/ansible.cfg
-
-
-  - cd tests/
-  
-  - ls
   # Check the role/playbook's syntax.
-  - ansible-playbook -i inventory --syntax-check --list-tasks $PLAY
+  - ansible-playbook -i tests/inventory --syntax-check --list-tasks tests/$PLAY
 
   # Run the role/playbook with ansible-playbook.
-  - ansible-playbook -i inventory --connection=local --sudo -vvvv $PLAY
+  - ansible-playbook -i tests/inventory --connection=local --sudo -vvvv tests/$PLAY
 
   # Run the role/playbook again, checking to make sure it's idempotent.
   #- >
