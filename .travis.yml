@@ -22,8 +22,6 @@ script:
   
   - cp -r /home/travis/build/amagno/ansible/roles/ /home/travis/build/amagno/ansible/tests/roles/
 
-  - ls tests/
-  - echo 'Roles in Tests'
   - ls tests/roles/
 
   # Check the role/playbook's syntax.
@@ -31,6 +29,13 @@ script:
 
   # Run the role/playbook with ansible-playbook.
   - ansible-playbook -i tests/inventory --connection=local --sudo -vvvv tests/$PLAY
+
+  - ls /etc/nginx/
+
+  - ls /etc/nginx/sites-enabled/
+
+  - cat /etc/nginx/sites-enabled/nginx-ansible.conf
+
 
   # Run the role/playbook again, checking to make sure it's idempotent.
   #- >
