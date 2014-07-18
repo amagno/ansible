@@ -1,4 +1,6 @@
 ansible
+
+[https://travis-ci.org/amagno/ansible.svg?branch=master](https://travis-ci.org/amagno/ansible/)
 =======
 
 Ansible Configuration Roles For
