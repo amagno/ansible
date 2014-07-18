@@ -16,7 +16,7 @@
 
 - name: Add nginx-ansible config to sites-enabled
   template: src=nginx-ansible.conf dest=/etc/nginx/sites-enabled/nginx-ansible
-  notify: restart nginx
+  notify: start nginx
 
 
 

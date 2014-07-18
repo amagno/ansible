@@ -26,4 +26,7 @@
 - name: Modify permission path {{ nginx_root_path }}
   file: path={{ nginx_root_path }} recurse=yes owner=www-data group=www-data mode=0755
 
+- name: Delete default config nginx
+  file: path=/etc/nginx/sites-enabled/default state=absent
+
 
