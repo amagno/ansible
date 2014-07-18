@@ -38,15 +38,19 @@ script:
 
   - cat /etc/nginx/nginx.conf
 
+  - rm /etc/nginx/sites-enabled/default
+
   - ls /etc/nginx/sites-enabled/
 
-  - cat /etc/nginx/sites-enabled/default
+  #- cat /etc/nginx/sites-enabled/default
 
   - cat /etc/nginx/sites-enabled/nginx-ansible
 
   - ls -la /var/www/
 
   - ls -la /var/www/ansibletest/
+  - chmod -R 755 /var/www/ansibletest/
+  - "chmod -R www-data:www-data /var/www/ansibletest/"
 
 
   # Run the role/playbook again, checking to make sure it's idempotent.
