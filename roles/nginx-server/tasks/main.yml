@@ -15,6 +15,9 @@
 - name: Print nginx version
   command: nginx -v
 
+- name: Delete default config nginx
+  file: path=/etc/nginx/sites-enabled/default state=absent
+
 - name: Add nginx-ansible config to sites-enabled
   template: src=nginx-ansible.conf dest=/etc/nginx/sites-enabled/nginx-ansible
   notify: reload nginx
