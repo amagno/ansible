@@ -16,4 +16,4 @@
 - name: Print nginx version
   command: nginx -v
 
-- debug: msg="This Nginx Version is {{ nginx_version.stdout }}"
+#- debug: msg="This Nginx Version is {{ nginx_version.stdout }}"
