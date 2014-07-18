@@ -18,9 +18,13 @@ install:
 script:
 
   # Add ansible.cfg to pick up roles path.
+  - ls
+
   - printf '[defaults]\nroles_path = ../' > tests/ansible.cfg
 
   - ls -ln tests/
+
+  - cat tests/ansible.cfg
 
   - ls
 
