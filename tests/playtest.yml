@@ -6,7 +6,7 @@
     - nginx_port: 80
     - nginx_servername: localhost
     - nginx_index_file: index.php
-    - php_fpm_listem: 127.0.0.1:9000
+    - php_fpm_listen: 127.0.0.1:9000
   roles:
     - nginx-server
     - php-fpm
