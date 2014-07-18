@@ -32,7 +32,7 @@ script:
 
   - php -v
 
-  - nginx status
+  - nginx -v
 
   - ls /etc/nginx/
 
@@ -49,8 +49,7 @@ script:
   - ls -la /var/www/
 
   - ls -la /var/www/ansibletest/
-  - chmod -R 755 /var/www/ansibletest/
-  - "chmod -R www-data:www-data /var/www/ansibletest/"
+
 
 
   # Run the role/playbook again, checking to make sure it's idempotent.

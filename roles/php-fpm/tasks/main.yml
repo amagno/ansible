@@ -19,7 +19,11 @@
     - php5-xdebug
   notify: restart php-fpm
 
+
 - name: Copy index of PHP Test
   copy: src=index.php dest={{ nginx_root_path }}
+
+- name: Modify permission path {{ nginx_root_path }}
+  file: path={{ nginx_root_path }} recurse=yes owner=www-data group=www-data mode=0755
 
 
