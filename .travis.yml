@@ -19,11 +19,15 @@ script:
   # Add ansible.cfg to pick up roles path.
   - ls
   # teste
-  - printf '[defaults]\nroles_path = /home/travis/build/amagno/ansible/' > tests/ansible.cfg
+  # - printf '[defaults]\nroles_path = /home/travis/build/amagno/ansible/' > tests/ansible.cfg
+  
+  - ln -r /home/travis/build/amagno/ansible/roles/ /home/travis/build/amagno/ansible/tests/roles/
 
   - ls -ln tests/
+  
+  - ls -ln tests/roles/
 
-  - cat tests/ansible.cfg
+  # - cat tests/ansible.cfg
 
   - ls
 
