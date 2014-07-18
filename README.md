@@ -17,5 +17,5 @@ Run on Vagrant in box hashicorp/precise64
 - memcached
 - HHVM
 
-I will soon provide Vagrantfile...
+I will soon provide Vagrantfile.
 
