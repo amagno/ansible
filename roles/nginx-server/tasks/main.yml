@@ -10,10 +10,19 @@
 
 - name: Install Nignx
   apt: name=nginx state=present
-  notify: start nginx
-
 
 - name: Print nginx version
   command: nginx -v
+
+- name: Add nginx-ansible config to sites-enabled
+  template: src=nginx-ansible.conf dest=/etc/nginx/sites-enabled/
+  notify: restart nginx
+
+- name: View nginx sites-enabled
+  command: ls -ln /etc/nignx/sites-enabled/
+  register: debug_sites_enabled
+
+- debug: msg="Debug index php file php-fpm {{ debug_sites_enabled.stdout }}"
+
 
 #- debug: msg="This Nginx Version is {{ nginx_version.stdout }}"

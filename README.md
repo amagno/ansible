@@ -5,7 +5,7 @@ Ansible Configuration Roles
 
 =========================================
 
-Docs Ansible(http://docs.ansible.com/)
+[Docs Ansible](http://docs.ansible.com/)
 
 ----------------------------------------------
 
@@ -15,15 +15,15 @@ Docs Ansible(http://docs.ansible.com/)
 
     Ansible Configuration Roles For:
           
-    - nginx
-    - php-fpm
-    - composer
-    - git
-    - postgreSQL
-    - mysql
-    - node with websockets
-    - memcached
-    - HHVM
+    - [] nginx
+    - [] php-fpm
+    - [] composer
+    - [] git
+    - [] postgreSQL
+    - [] mysql
+    - [] node with websockets
+    - [] memcached
+    - [] HHVM
 
 I will soon provide Vagrantfile.
 

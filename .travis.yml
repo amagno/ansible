@@ -23,6 +23,7 @@ script:
   - cp -r /home/travis/build/amagno/ansible/roles/ /home/travis/build/amagno/ansible/tests/roles/
 
   - ls tests/
+  - echo 'Roles in Tests'
   - ls tests/roles/
 
   # Check the role/playbook's syntax.

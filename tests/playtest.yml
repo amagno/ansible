@@ -1,5 +1,11 @@
 ---
 - hosts: localhost
   remote_user: root
+  vars:
+    - nginx_root_path: /var/www/ansibletest/
+    - nginx_port: 80
+    - nginx_servername: localhost
+    - nginx_index_file: index.php
   roles:
     - nginx-server
+    - php-fpm

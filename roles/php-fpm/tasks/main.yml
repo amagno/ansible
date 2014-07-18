@@ -1,0 +1,19 @@
+---
+- name: Dev Environment Install php5-fpm and components
+  apt: name={{ item }} state=latest update_cache=yes
+  with_items:
+    - php5-fpm
+    - php5-common
+    - php5-curl
+    - php5-mcrypt
+    - php5-mysql
+    - php5-pgsql
+    - php5-memcached
+    - php5-cli
+    - php5-xdebug
+  notify: restart php-fpm
+
+- name: Copy index of PHP Test
+  copy: src=index.php dest={{ nginx_root_path }}
+
+
